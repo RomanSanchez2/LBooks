@@ -4,6 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
+<style>
+    .CRUD {
+        margin-left: 800px;
+    }
+</style>
+
 <h1>Index</h1>
 
 <p>
@@ -25,7 +31,7 @@
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdAutor">Edit</a> |
+                <a class="CRUD" asp-action="Edit" asp-route-id="@item.IdAutor">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IdAutor">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdAutor">Delete</a>
             </td>

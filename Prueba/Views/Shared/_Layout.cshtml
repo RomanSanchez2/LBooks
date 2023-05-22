@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Prueba.styles.css" asp-append-version="true" />
-    <style>
-        footer{
-            background-color: white
-        }
-
-    </style>
+    @section CSS {
+        <link href="./css/layout.css"/>
+    }
 </head>
 <body>
     <header>
@@ -47,7 +44,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer  id="Footer" class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - Prueba - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             <h5>Este Proyecto esta realizado por</h5>
