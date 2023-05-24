@@ -4,18 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<style>
-    .CRUD {
-        margin-left: 800px;
-    }
-</style>
 
 <h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table" id="myTable">
     <thead>
         <tr>
             <th>
@@ -39,3 +34,10 @@
 }
     </tbody>
 </table>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#myTable").DataTable();
+        });
+    </script>
+}

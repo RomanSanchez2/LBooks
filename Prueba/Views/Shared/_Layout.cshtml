@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Prueba.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    @RenderSection("CSS",required:false)
     @section CSS {
-        <link href="./css/layout.css"/>
+        <link href="/css/layout.css"/>
+        <link href="/css/HomePage.css" />
+        <link href="/css/CreateAutor.css" />
+        <link href="/css/CRUD.css" />
+        <link href="/css/Contactanos.css" />
+
     }
 </head>
 <body>
@@ -60,6 +67,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
     
 </body>
 </html>

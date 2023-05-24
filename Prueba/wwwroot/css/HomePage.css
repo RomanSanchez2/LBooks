@@ -1,2 +1,12 @@
-﻿body {
+﻿
+body {
+    background-color: grey
+}
+
+.card {
+    margin-top: 50px
+}
+
+h1{
+    color: dimgray
 }
