@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 namespace Prueba.Controllers
 {
+    
     public class HomeController : Controller
     {
 
@@ -15,7 +16,7 @@ namespace Prueba.Controllers
         {
             _logger = logger;
         }
-
+        [Authorize]
         public IActionResult Index() => View();
 
 

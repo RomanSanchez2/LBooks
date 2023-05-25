@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="~/Prueba.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     @RenderSection("CSS",required:false)
-    @section CSS {
-        <link href="/css/layout.css"/>
-        <link href="/css/HomePage.css" />
-        <link href="/css/CreateAutor.css" />
-        <link href="/css/CRUD.css" />
-        <link href="/css/Contactanos.css" />
-
-    }
-</head>
+    <link rel="stylesheet" href="/css/layout.css" />
+</head> 
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
@@ -51,8 +44,8 @@
         </main>
     </div>
 
-    <footer  id="Footer" class="border-top footer text-muted">
-        <div class="container">
+    <footer class="border-top text-muted contianer">
+        <div>
             &copy; 2023 - Prueba - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             <h5>Este Proyecto esta realizado por</h5>
             <p>

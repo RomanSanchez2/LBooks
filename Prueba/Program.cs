@@ -18,6 +18,11 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole<int>>(options => optio
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Account/Login";
+    options.LogoutPath = "/Identity/Account/Logout";
+});
 
 var app = builder.Build();
 
