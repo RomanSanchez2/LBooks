@@ -49,6 +49,7 @@ namespace Prueba.Controllers
         }
 
         // GET: Libro/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             ViewData["IdAutor"] = new SelectList(_context.Autors, "IdAutor", "IdAutor");
