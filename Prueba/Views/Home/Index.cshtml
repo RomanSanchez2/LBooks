@@ -2,6 +2,7 @@
 
 @section CSS {
     <link rel="stylesheet" href="/css/HomePage.css" />
+    <link rel="stylesheet" href="/css/Card.css" />
 }
 @{
     ViewData["Title"] = "Home Page";
@@ -15,10 +16,9 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="card mx-auto" style="width: 18rem;">
-
-        <p>@libro.IdLibro</p>
-        <img src="@libro.Imagen"></img>
-        <p>@libro.Titulo</p>
+                        <p class="Titulo">@libro.Titulo</p>
+                        <img class="Imagen" src="@libro.Imagen"></img>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
                     </div>
              </div>
         </div>

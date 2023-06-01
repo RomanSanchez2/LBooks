@@ -1,0 +1,10 @@
+﻿.Titulo {
+    margin: 15px;
+}
+
+.Imagen {
+    max-height: 150px;
+    max-width: 200px;
+    margin-left: 23px;
+    margin-bottom: 50px;
+}
