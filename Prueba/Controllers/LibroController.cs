@@ -11,7 +11,7 @@ using Prueba.Models.dbModels;
 
 namespace Prueba.Controllers
 {
-     [Authorize(Roles = "Administrador")]
+     [Authorize(Roles = "Administrador, Escritor")]
     public class LibroController : Controller
     {
         private readonly LBooks20Context _context;
@@ -49,7 +49,7 @@ namespace Prueba.Controllers
         }
 
         // GET: Libro/Create
-        [AllowAnonymous]
+       
         public IActionResult Create()
         {
             ViewData["IdAutor"] = new SelectList(_context.Autors, "IdAutor", "IdAutor");
@@ -61,7 +61,6 @@ namespace Prueba.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(LibroHR libro)
         {
