@@ -62,7 +62,7 @@ namespace Prueba.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdLibro,IdGenero,Fecha,IdAutor,Paginas,Imagen")] LibroHR libro)
+        public async Task<IActionResult> Create(LibroHR libro)
         {
             if (ModelState.IsValid)
             {
@@ -70,6 +70,8 @@ namespace Prueba.Controllers
                 {
                     IdLibro = libro.IdLibro,
                     IdGenero = libro.IdGenero,
+                    Contenido = libro.Contenido,
+                    Titulo = libro.Titulo,
                     Fecha = libro.Fecha,
                     IdAutor = libro.IdAutor,
                     Paginas = libro.Paginas,
