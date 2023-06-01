@@ -12,14 +12,14 @@ using Prueba.Models.dbModels;
 namespace Prueba.Migrations
 {
     [DbContext(typeof(LBooks20Context))]
-    [Migration("20230518001936_Init")]
+    [Migration("20230601020846_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.15")
+                .HasAnnotation("ProductVersion", "6.0.16")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -228,8 +228,11 @@ namespace Prueba.Migrations
             modelBuilder.Entity("Prueba.Models.dbModels.Autor", b =>
                 {
                     b.Property<int>("IdAutor")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("ID AUTOR");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdAutor"), 1L, 1);
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -245,8 +248,11 @@ namespace Prueba.Migrations
             modelBuilder.Entity("Prueba.Models.dbModels.Genero", b =>
                 {
                     b.Property<int>("IdGenero")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("ID GENERO");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdGenero"), 1L, 1);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -262,8 +268,16 @@ namespace Prueba.Migrations
             modelBuilder.Entity("Prueba.Models.dbModels.Libro", b =>
                 {
                     b.Property<int>("IdLibro")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("ID LIBRO");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdLibro"), 1L, 1);
+
+                    b.Property<string>("Contenido")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("CONTENIDO");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime")
@@ -287,6 +301,11 @@ namespace Prueba.Migrations
                         .HasColumnType("int")
                         .HasColumnName("PAGINAS");
 
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("TITULO");
+
                     b.HasKey("IdLibro");
 
                     b.HasIndex("IdAutor");
@@ -299,8 +318,11 @@ namespace Prueba.Migrations
             modelBuilder.Entity("Prueba.Models.dbModels.Reseña", b =>
                 {
                     b.Property<int>("IdReseñas")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("ID RESEÑAS");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdReseñas"), 1L, 1);
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime")

@@ -23,6 +23,11 @@ namespace Prueba.Models.dbModels
         public DateTime Fecha { get; set; }
         [Column("ID AUTOR")]
         public int IdAutor { get; set; }
+        [Column("TITULO")]
+        public string Titulo { get; set; } = null!;
+        [Column("CONTENIDO")]
+        public string Contenido { get; set; } = null!;
+
         [Column("PAGINAS")]
         public int Paginas { get; set; }
         [Column("IMAGEN")]

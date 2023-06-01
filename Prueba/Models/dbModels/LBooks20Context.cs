@@ -28,17 +28,17 @@ namespace Prueba.Models.dbModels
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Autor>(entity =>
             {
-                entity.Property(e => e.IdAutor).ValueGeneratedNever();
+                entity.Property(e => e.IdAutor).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<Genero>(entity =>
             {
-                entity.Property(e => e.IdGenero).ValueGeneratedNever();
+                entity.Property(e => e.IdGenero).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<Libro>(entity =>
             {
-                entity.Property(e => e.IdLibro).ValueGeneratedNever();
+                entity.Property(e => e.IdLibro).ValueGeneratedOnAdd();
 
                 entity.HasOne(d => d.IdAutorNavigation)
                     .WithMany(p => p.Libros)
@@ -55,7 +55,7 @@ namespace Prueba.Models.dbModels
 
             modelBuilder.Entity<Reseña>(entity =>
             {
-                entity.Property(e => e.IdReseñas).ValueGeneratedNever();
+                entity.Property(e => e.IdReseñas).ValueGeneratedOnAdd();
 
                 entity.HasOne(d => d.IdLibroNavigation)
                     .WithMany(p => p.Reseñas)

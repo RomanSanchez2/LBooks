@@ -1,4 +1,6 @@
-﻿@section CSS {
+﻿@model HomeViewModel
+
+@section CSS {
     <link rel="stylesheet" href="/css/HomePage.css" />
 }
 @{
@@ -6,96 +8,112 @@
 }
 
 
-<div class="container" >
-<h1>Recomendados</h1>
-<!--Carousel 1-->
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">1 Titulo del libro que se tomo de la base de datos</h5>
-                    <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
-                    <a href="#" class="btn btn-primary">Leer Libro</a>
+<div class="container">
+    <h1>Recomendados</h1>
+    <!--Carousel 1-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">1 Titulo del libro que se tomo de la base de datos</h5>
+                        <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">2 Titulo del libro que se tomo de la base de datos</h5>
+                        <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">3 Titulo del libro que se tomo de la base de datos</h5>
+                        <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">2 Titulo del libro que se tomo de la base de datos</h5>
-                    <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
-                    <a href="#" class="btn btn-primary">Leer Libro</a>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">3 Titulo del libro que se tomo de la base de datos</h5>
-                    <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
-                    <a href="#" class="btn btn-primary">Leer Libro</a>
-                </div>
-            </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+
+    <!--Contenido 2-->
+    <h1>Terror</h1>
+    <!--Carousel 2-->
+    <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">1 Titulo del libro que se tomo de la base de datos</h5>
+                        <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">2 Titulo del libro que se tomo de la base de datos</h5>
+                        <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">3 Titulo del libro que se tomo de la base de datos</h5>
+                        <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
+                        <a href="#" class="btn btn-primary">Leer Libro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
 </div>
 
-<!--Contenido 2-->
-<h1>Terror</h1>
-<!--Carousel 2-->
-<div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">1 Titulo del libro que se tomo de la base de datos</h5>
-                    <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
-                    <a href="#" class="btn btn-primary">Leer Libro</a>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">2 Titulo del libro que se tomo de la base de datos</h5>
-                    <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
-                    <a href="#" class="btn btn-primary">Leer Libro</a>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card mx-auto" style="width: 18rem;">
-                <img src="https://cdn.culturagenial.com/es/imagenes/libro-el-principito-og.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">3 Titulo del libro que se tomo de la base de datos</h5>
-                    <p class="card-text">Sinapsis del libro que se tomo de la base de datos.</p>
-                    <a href="#" class="btn btn-primary">Leer Libro</a>
-                </div>
-            </div>
+@foreach(Libro libro in Model.Libros) {
+    <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card mx-auto" style="width: 18rem;">
+
+        <p>@libro.IdLibro</p>
+        <p>@libro.Imagen</p>
+        <p>@libro.Titulo</p>
+                    </div>
+             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-</div>
+ 
+}

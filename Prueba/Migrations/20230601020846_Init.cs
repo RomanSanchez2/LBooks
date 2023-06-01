@@ -54,7 +54,8 @@ namespace Prueba.Migrations
                 name: "AUTOR",
                 columns: table => new
                 {
-                    IDAUTOR = table.Column<int>(name: "ID AUTOR", type: "int", nullable: false),
+                    IDAUTOR = table.Column<int>(name: "ID AUTOR", type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     NOMBRE = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
@@ -66,7 +67,8 @@ namespace Prueba.Migrations
                 name: "GENERO",
                 columns: table => new
                 {
-                    IDGENERO = table.Column<int>(name: "ID GENERO", type: "int", nullable: false),
+                    IDGENERO = table.Column<int>(name: "ID GENERO", type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     DESCRIPCION = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
@@ -184,10 +186,13 @@ namespace Prueba.Migrations
                 name: "LIBRO",
                 columns: table => new
                 {
-                    IDLIBRO = table.Column<int>(name: "ID LIBRO", type: "int", nullable: false),
+                    IDLIBRO = table.Column<int>(name: "ID LIBRO", type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     IDGENERO = table.Column<int>(name: "ID GENERO", type: "int", nullable: false),
                     FECHA = table.Column<DateTime>(type: "datetime", nullable: false),
                     IDAUTOR = table.Column<int>(name: "ID AUTOR", type: "int", nullable: false),
+                    TITULO = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CONTENIDO = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PAGINAS = table.Column<int>(type: "int", nullable: false),
                     IMAGEN = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
@@ -210,7 +215,8 @@ namespace Prueba.Migrations
                 name: "RESEÑAS",
                 columns: table => new
                 {
-                    IDRESEÑAS = table.Column<int>(name: "ID RESEÑAS", type: "int", nullable: false),
+                    IDRESEÑAS = table.Column<int>(name: "ID RESEÑAS", type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     IDUSUARIO = table.Column<int>(name: "ID USUARIO", type: "int", nullable: false),
                     TITULO = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     FECHA = table.Column<DateTime>(type: "datetime", nullable: false),

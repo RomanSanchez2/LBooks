@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Configuration;
 using Prueba.Models;
+using Prueba.Models.dbModels;
+using Prueba.ViewModel;
 using System.Diagnostics;
 
 namespace Prueba.Controllers
@@ -11,13 +13,23 @@ namespace Prueba.Controllers
     {
 
         private readonly ILogger<HomeController> _logger;
+        private readonly LBooks20Context _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, LBooks20Context context)
         {
             _logger = logger;
+            _context = context;
         }
         [Authorize]
-        public IActionResult Index() => View();
+        [HttpGet]
+        public IActionResult Index()
+        {
+            HomeViewModel hvm = new HomeViewModel
+            {
+                Libros = _context.Libros.ToList()
+            };
+            return View(hvm);
+        }
 
 
 
